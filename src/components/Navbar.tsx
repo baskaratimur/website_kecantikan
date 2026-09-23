@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, ShoppingBag, MessageCircle, Sparkles } from 'lucide-react';
-import { BRAND_INFO } from '../data/productData';
+import { BRAND_INFO, PRODUCT_DATA } from '../data/productData';
 
 interface NavbarProps {
   onOpenOrderModal: (voucherCode?: string) => void;
@@ -53,7 +53,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenOrderModal }) => {
             {/* Brand Logo & Title */}
             <a href="#beranda" className="flex items-center space-x-3.5 group">
               <div className="w-11 h-11 rounded-full border border-[#B9B9B7] p-1 bg-white shadow-sm flex items-center justify-center overflow-hidden group-hover:scale-105 transition-transform duration-300">
-                <img src="/logo.png" alt="MODIARICH Logo" className="w-full h-full object-contain" />
+                <img src={PRODUCT_DATA.logo} alt="MODIARICH Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="font-serif text-2xl sm:text-3xl font-bold tracking-widest text-[#1C1C1A] group-hover:text-amber-800 transition-colors">

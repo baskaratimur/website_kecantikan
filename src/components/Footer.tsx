@@ -1,6 +1,6 @@
 import React from 'react';
 import { Heart, ShieldCheck, Instagram, MessageCircle, ArrowUp } from 'lucide-react';
-import { BRAND_INFO } from '../data/productData';
+import { BRAND_INFO, PRODUCT_DATA } from '../data/productData';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -17,7 +17,7 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             <div className="flex items-center space-x-3">
               <div className="w-10 h-10 rounded-full border border-[#B9B9B7] p-1 bg-white flex items-center justify-center">
-                <img src="/logo.png" alt="MODIARICH Logo" className="w-full h-full object-contain" />
+                <img src={PRODUCT_DATA.logo} alt="MODIARICH Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-serif text-2xl font-bold tracking-widest text-white">
                 MODIARICH
@@ -43,11 +43,9 @@ export const Footer: React.FC = () => {
             <h4 className="font-serif text-lg font-bold text-white mb-2">Navigasi Utama</h4>
             <ul className="space-y-2 text-xs">
               <li><a href="#beranda" className="hover:text-white transition-colors">Beranda</a></li>
-              <li><a href="#tentang" className="hover:text-white transition-colors">Kisah Kami (Moktar & Alm. Diah Rich)</a></li>
               <li><a href="#produk" className="hover:text-white transition-colors">Katalog Produk</a></li>
-              <li><a href="#ingredients" className="hover:text-white transition-colors">Kandungan Nutrisi (Niacinamide 2%)</a></li>
-              <li><a href="#khasiat" className="hover:text-white transition-colors">Khasiat & Cara Pakai</a></li>
-              <li><a href="#journal" className="hover:text-white transition-colors">Beauty Journal & Data Dukung</a></li>
+              <li><a href="#testimoni" className="hover:text-white transition-colors">Testimoni Pelanggan</a></li>
+              <li><a href="#kontak" className="hover:text-white transition-colors">Kontak & Lokasi</a></li>
             </ul>
           </div>
 

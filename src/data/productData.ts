@@ -1,3 +1,6 @@
+import logoImg from '../assets/logo.png';
+import productImg from '../assets/product.png';
+
 export interface Ingredient {
   id: string;
   name: string;
@@ -73,9 +76,9 @@ export const PRODUCT_DATA = {
   bpom: "NA18260500524",
   halal: "Sertifikasi Halal Indonesia",
   netWeight: "80 gr",
-  image: "/product.png",
-  logo: "/logo.png",
-  shortDescription: "Product menghilangkan bekas luka",
+  image: productImg,
+  logo: logoImg,
+  shortDescription: "Formulasi eksklusif Niacinamide 2%, Ekstrak Kunyit (Curcumin 3-8%), Kopi Robusta & Arabica, Aloe Vera, serta Super-Antioksidan Astaxanthin untuk mencerahkan noda hitam, meratakan warna kulit, dan memperkuat skin barrier.",
   fullIngredients: [
     "Glycerin", "Aqua", "Sucrose", "Stearic Acid", "Ethanol", "Lauryl Glucoside",
     "Myristic Acid", "Sodium Hydroxide", "Cocamidopropyl Betaine", "Niacinamide (2%)",
