@@ -26,10 +26,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
                 <Sparkles className="w-3.5 h-3.5 text-[#1C1C1A]" />
                 <span>Formulasi Natural Beauty</span>
               </span>
-              <span className="inline-flex items-center space-x-1.5 bg-white border border-[#B9B9B7]/60 text-[#1C1C1A] text-xs font-medium px-3 py-1.5 rounded-full shadow-xs">
+              {/* <span className="inline-flex items-center space-x-1.5 bg-white border border-[#B9B9B7]/60 text-[#1C1C1A] text-xs font-medium px-3 py-1.5 rounded-full shadow-xs">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
                 <span>BPOM {BRAND_INFO.bpomNumber} & Halal Certified</span>
-              </span>
+              </span> */}
             </div>
 
             {/* Main Headline */}
@@ -60,14 +60,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
 
             {/* Primary Action Buttons */}
             <div className="pt-4 flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4">
-              <button
+              {/* <button
                 onClick={onOpenOrderModal}
                 className="w-full sm:w-auto inline-flex items-center justify-center space-x-3 bg-[#1C1C1A] hover:bg-[#2D2D2B] text-white font-semibold text-sm px-7 py-4 rounded-full transition-all shadow-lg hover:shadow-xl hover:scale-105"
               >
                 <ShoppingBag className="w-4 h-4 text-[#B9B9B7]" />
                 <span>Beli Produk via WA ({BRAND_INFO.phone})</span>
                 <ArrowRight className="w-4 h-4" />
-              </button>
+              </button> */}
 
               <button
                 onClick={onOpenDetailModal}

@@ -40,11 +40,11 @@ export const TestimonialsSection: React.FC<TestimonialsSectionProps> = ({
         {/* Rating Breakdown Bar */}
         <div className="bg-white p-6 rounded-2xl border border-[#B9B9B7]/40 mb-12 flex flex-col md:flex-row items-center justify-between gap-6 shadow-sm">
           <div className="flex items-center space-x-4">
-            <div className="text-center sm:text-left">
+            {/* <div className="text-center sm:text-left">
               <span className="font-serif text-4xl font-bold text-[#1C1C1A]">4.9</span>
               <span className="text-xs text-[#7E7D7A] block">dari 5.0 bintang</span>
-            </div>
-            <div className="h-10 w-px bg-stone-200"></div>
+            </div> */}
+            {/* <div className="h-10 w-px bg-stone-200"></div> */}
             <div>
               <div className="flex space-x-1 text-amber-400">
                 {[...Array(5)].map((_, i) => (
