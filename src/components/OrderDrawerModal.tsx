@@ -97,7 +97,7 @@ export const OrderDrawerModal: React.FC<OrderDrawerModalProps> = ({
             <MessageCircle className="w-5 h-5 text-emerald-600" />
           </h2>
           <p className="text-xs text-[#5C5B58] mt-0.5">
-            Pesanan Anda akan langsung terhubung dengan Admin Resmi MODIARICH (08997775838).
+            Pesanan Anda akan langsung terhubung dengan Admin Resmi MODIARICH (081285973475).
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export const OrderDrawerModal: React.FC<OrderDrawerModalProps> = ({
               <input
                 type="text"
                 required
-                placeholder="Contoh: 08997775838"
+                placeholder="Contoh: 081285973475"
                 value={buyerPhone}
                 onChange={(e) => setBuyerPhone(e.target.value)}
                 className="w-full px-3 py-2 rounded-xl bg-[#FAF9F6] border border-stone-200 text-xs focus:outline-none focus:border-[#1C1C1A]"
@@ -228,7 +228,7 @@ export const OrderDrawerModal: React.FC<OrderDrawerModalProps> = ({
             className="w-full flex items-center justify-center space-x-2 bg-[#1C1C1A] hover:bg-emerald-700 text-white font-semibold text-sm py-4 rounded-full transition-all shadow-md"
           >
             <MessageCircle className="w-5 h-5 text-emerald-400" />
-            <span>Kirim Pesanan ke WA Admin (08997775838)</span>
+            <span>Kirim Pesanan ke WA Admin (081285973475)</span>
           </button>
 
         </form>

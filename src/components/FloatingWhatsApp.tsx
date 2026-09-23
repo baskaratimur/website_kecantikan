@@ -25,7 +25,7 @@ export const FloatingWhatsApp: React.FC<FloatingWhatsAppProps> = ({ onOpenOrderM
         target="_blank"
         rel="noopener noreferrer"
         className="relative group bg-emerald-600 hover:bg-emerald-700 text-white p-3.5 sm:px-5 sm:py-3.5 rounded-full shadow-floating flex items-center space-x-3 transition-all hover:scale-105 animate-pulse-subtle"
-        aria-label="Contact via WhatsApp 08997775838"
+        aria-label="Contact via WhatsApp 081285973475"
       >
         {/* Pulsing indicator ring */}
         <span className="absolute -top-1 -right-1 flex h-4 w-4">

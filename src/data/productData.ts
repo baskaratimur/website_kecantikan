@@ -52,7 +52,7 @@ export interface Voucher {
 export const BRAND_INFO = {
   name: "MODIARICH",
   tagline: "Natural Beauty Born from Heart & Science",
-  phone: "08997775838",
+  phone: "081285973475",
   waNumber: "628997775838",
   instagram: "@modiarich",
   tiktok: "@modiarich",
@@ -342,6 +342,6 @@ export const FAQS = [
   },
   {
     q: "Bagaimana cara memesan produk via WhatsApp atau Marketplace?",
-    a: "Anda dapat mengeklik tombol 'Beli Produk via WA' untuk terhubung langsung dengan admin resmi MODIARICH (08997775838), atau memilih toko resmi kami di Shopee, Tokopedia, dan TikTok Shop yang tertera pada bagian How to Buy."
+    a: "Anda dapat mengeklik tombol 'Beli Produk via WA' untuk terhubung langsung dengan admin resmi MODIARICH (081285973475), atau memilih toko resmi kami di Shopee, Tokopedia, dan TikTok Shop yang tertera pada bagian How to Buy."
   }
 ];
