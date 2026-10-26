@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { MessageCircle, Mail, Instagram, ShoppingCart, Send, MapPin, CheckCircle2, Sparkles } from 'lucide-react';
+import { MessageCircle, Mail, Instagram, ShoppingCart, ShoppingBag, Send, MapPin, CheckCircle2, Sparkles } from 'lucide-react';
 import { BRAND_INFO } from '../data/productData';
 
 export const ContactSection: React.FC = () => {
@@ -66,7 +66,7 @@ export const ContactSection: React.FC = () => {
 
               {/* Shopee */}
               <a
-                href="https://shopee.co.id"
+                href={BRAND_INFO.shopeeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-amber-600 hover:bg-amber-700 text-white p-4 rounded-2xl flex flex-col justify-between space-y-3 transition-all hover:scale-105 shadow-sm"
@@ -78,41 +78,46 @@ export const ContactSection: React.FC = () => {
                 </div>
               </a>
 
-              {/* Tokopedia */}
-              <a
-                href="https://tokopedia.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-emerald-800 hover:bg-emerald-900 text-white p-4 rounded-2xl flex flex-col justify-between space-y-3 transition-all hover:scale-105 shadow-sm"
-              >
-                <ShoppingCart className="w-6 h-6 text-white" />
-                <div>
-                  <span className="font-bold text-sm block">Tokopedia</span>
-                  <span className="text-[11px] opacity-90">Official Store</span>
-                </div>
-              </a>
-
               {/* TikTok Shop */}
               <a
-                href="https://tiktok.com"
+                href={BRAND_INFO.tiktokShopUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#1C1C1A] hover:bg-black text-white p-4 rounded-2xl flex flex-col justify-between space-y-3 transition-all hover:scale-105 shadow-sm"
               >
-                <Instagram className="w-6 h-6 text-white" />
+                <ShoppingBag className="w-6 h-6 text-white" />
                 <div>
                   <span className="font-bold text-sm block">TikTok Shop</span>
-                  <span className="text-[11px] opacity-90">@modiarich</span>
+                  <span className="text-[11px] opacity-90">Toko Resmi @modiarich</span>
+                </div>
+              </a>
+
+              {/* Instagram Official */}
+              <a
+                href={BRAND_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-tr from-amber-600 via-rose-600 to-purple-600 hover:opacity-95 text-white p-4 rounded-2xl flex flex-col justify-between space-y-3 transition-all hover:scale-105 shadow-sm"
+              >
+                <Instagram className="w-6 h-6 text-white" />
+                <div>
+                  <span className="font-bold text-sm block">Instagram</span>
+                  <span className="text-[11px] opacity-90">{BRAND_INFO.instagram}</span>
                 </div>
               </a>
 
             </div>
 
             <div className="pt-4 border-t border-stone-200/60 text-xs text-[#5C5B58] space-y-2">
-              <div className="flex items-center space-x-2">
+              <a
+                href={BRAND_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 hover:text-pink-600 transition-colors"
+              >
                 <Instagram className="w-4 h-4 text-pink-600" />
-                <span>Instagram: <strong>{BRAND_INFO.instagram}</strong></span>
-              </div>
+                <span>Instagram Resmi: <strong>{BRAND_INFO.instagram}</strong></span>
+              </a>
               <div className="flex items-center space-x-2">
                 <MapPin className="w-4 h-4 text-amber-700" />
                 <span>Lokasi: <strong>Jakarta, Indonesia (Formulasi UNJ)</strong></span>

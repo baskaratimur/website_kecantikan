@@ -15,6 +15,7 @@ import { ProductDetailModal } from './components/ProductDetailModal';
 import { OrderDrawerModal } from './components/OrderDrawerModal';
 import { WriteReviewModal } from './components/WriteReviewModal';
 import { UploadJournalModal } from './components/UploadJournalModal';
+import { ArticleDetailModal } from './components/ArticleDetailModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
 
 import { INITIAL_TESTIMONIALS, INITIAL_JOURNALS, Testimonial, JournalArticle } from './data/productData';
@@ -24,6 +25,7 @@ export function App() {
   const [isOrderModalOpen, setIsOrderModalOpen] = useState(false);
   const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
   const [isJournalModalOpen, setIsJournalModalOpen] = useState(false);
+  const [selectedArticle, setSelectedArticle] = useState<JournalArticle | null>(null);
 
   const [activeVoucherCode, setActiveVoucherCode] = useState('');
   const [testimonials, setTestimonials] = useState<Testimonial[]>(INITIAL_TESTIMONIALS);
@@ -76,15 +78,16 @@ export function App() {
         <BenefitsUsageSection onOpenDetailModal={() => setIsDetailModalOpen(true)} />
 
         {/* 7. Customer Testimonials */}
-        <TestimonialsSection
+        {/* <TestimonialsSection
           testimonials={testimonials}
           onOpenWriteReviewModal={() => setIsReviewModalOpen(true)}
-        />
+        /> */}
 
         {/* 8. Beauty Journal & Scientific Backing */}
         <BeautyJournalSection
           journals={journals}
           onOpenUploadJournalModal={() => setIsJournalModalOpen(true)}
+          onSelectArticle={(article) => setSelectedArticle(article)}
         />
 
         {/* 9. FAQ Accordion */}
@@ -111,6 +114,12 @@ export function App() {
         isOpen={isOrderModalOpen}
         onClose={() => setIsOrderModalOpen(false)}
         initialVoucherCode={activeVoucherCode}
+      />
+
+      <ArticleDetailModal
+        article={selectedArticle}
+        isOpen={!!selectedArticle}
+        onClose={() => setSelectedArticle(null)}
       />
 
       <WriteReviewModal

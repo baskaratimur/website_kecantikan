@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X, ShoppingBag, MessageCircle, Tag, Check, Sparkles, Truck } from 'lucide-react';
+import { X, ShoppingBag, ShoppingCart, MessageCircle, Tag, Check, Sparkles, Truck } from 'lucide-react';
 import { PRODUCT_DATA, BRAND_INFO, VOUCHERS } from '../data/productData';
 
 interface OrderDrawerModalProps {
@@ -36,10 +36,10 @@ export const OrderDrawerModal: React.FC<OrderDrawerModalProps> = ({
   if (selectedVoucherCode === 'NEWCUSTOMER10') {
     discount = 10000;
   } else if (selectedVoucherCode === 'LAUNCHING2026') {
-    discount = Math.round(subtotal * 0.25);
+    discount = Math.round(subtotal * 0.50);
   } else if (selectedVoucherCode === 'BEAUTYFREE') {
     freeShip = true;
-    discount = 15000;
+    discount = 10000;
   } else if (selectedVoucherCode === 'BUNDLE3SAVER') {
     discount = 35000;
   }
@@ -97,7 +97,7 @@ export const OrderDrawerModal: React.FC<OrderDrawerModalProps> = ({
             <MessageCircle className="w-5 h-5 text-emerald-600" />
           </h2>
           <p className="text-xs text-[#5C5B58] mt-0.5">
-            Pesanan Anda akan langsung terhubung dengan Admin Resmi MODIARICH (081285973475).
+            Pesanan Anda akan langsung terhubung dengan Admin Resmi MODIARICH (6285218880476).
           </p>
         </div>
 
@@ -173,7 +173,7 @@ export const OrderDrawerModal: React.FC<OrderDrawerModalProps> = ({
               <input
                 type="text"
                 required
-                placeholder="Contoh: 081285973475"
+                placeholder="Contoh: 6285218880476"
                 value={buyerPhone}
                 onChange={(e) => setBuyerPhone(e.target.value)}
                 className="w-full px-3 py-2 rounded-xl bg-[#FAF9F6] border border-stone-200 text-xs focus:outline-none focus:border-[#1C1C1A]"
@@ -228,8 +228,33 @@ export const OrderDrawerModal: React.FC<OrderDrawerModalProps> = ({
             className="w-full flex items-center justify-center space-x-2 bg-[#1C1C1A] hover:bg-emerald-700 text-white font-semibold text-sm py-4 rounded-full transition-all shadow-md"
           >
             <MessageCircle className="w-5 h-5 text-emerald-400" />
-            <span>Kirim Pesanan ke WA Admin (081285973475)</span>
+            <span>Kirim Pesanan ke WA Admin ({BRAND_INFO.phone})</span>
           </button>
+
+          {/* Alternative Marketplaces */}
+          <div className="pt-3 border-t border-stone-100 text-center">
+            <p className="text-[11px] text-[#7E7D7A] mb-2 font-medium">Atau beli via Marketplace Resmi:</p>
+            <div className="flex items-center justify-center gap-2">
+              <a
+                href={BRAND_INFO.shopeeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-1.5 px-4 py-2 bg-amber-500 hover:bg-amber-600 text-white rounded-full text-xs font-semibold shadow-sm transition-all"
+              >
+                <ShoppingCart className="w-3.5 h-3.5" />
+                <span>Shopee Official</span>
+              </a>
+              <a
+                href={BRAND_INFO.tiktokShopUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center space-x-1.5 px-4 py-2 bg-[#1C1C1A] hover:bg-black text-white rounded-full text-xs font-semibold shadow-sm transition-all"
+              >
+                <ShoppingBag className="w-3.5 h-3.5" />
+                <span>TikTok Shop Resmi</span>
+              </a>
+            </div>
+          </div>
 
         </form>
 

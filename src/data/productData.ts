@@ -8,7 +8,7 @@ export interface Ingredient {
   role: string;
   description: string[];
   icon: string;
-  badge: string;
+  badge?: string;
   benefits: string[];
   color: string;
 }
@@ -31,7 +31,7 @@ export interface JournalArticle {
   id: string;
   title: string;
   category: string;
-  readTime: string;
+  readTime?: string;
   date: string;
   summary: string;
   content: string;
@@ -52,14 +52,17 @@ export interface Voucher {
 export const BRAND_INFO = {
   name: "MODIARICH",
   tagline: "Natural Beauty Born from Heart & Science",
-  phone: "081285973475",
-  waNumber: "628997775838",
+  phone: "6285218880476",
+  waNumber: "6285218880476",
   instagram: "@modiarich",
+  instagramUrl: "https://www.instagram.com/modiarich/",
   tiktok: "@modiarich",
+  shopeeUrl: "https://shopee.co.id/product/1867712611/55312671635/",
+  tiktokShopUrl: "https://shop-id.tokopedia.com/view/product/1737925921066615993?encode_params=MIIBpgQMc6HPJXmaws_orH5mBIIBgkMtkDO6RyRN2q2KLoQixZ8BCoW96WINd8RiM-Slyx1-NqiBnghIyblm9G4lDfd37wYpWNPjAfhTe5u5wu2CeZkx7e9TcFPFCiFHRkOm8OAkuSiNhtj0m5v57Wk4x93SvsDfJEHb9FbYJcMZeOySZsfo4xizsKeNMfYHBb8oYV-Sf_b7PiAqir1mTYwP6UNljxrUzvgHqh8_1dbrgof6w0hAWzHjcDOGGm0JcT_0k34-5TZPwhpM1qL9Eq6YtnItN6D4TE-OsLD-nkaVDBlqMYDkO4C0u55V4T9Oqn5FjvSVBGR-Fby0TJVtuL0p_1OHmy1SnvavSPrGt1JTRMPuHAXQsX6khok88upTAzgnT-Q1b-p_JKbpOxiZbo2D4xHUwQYMYmuzS3Q-7R8kS5YRcSpS28na4Vps5_6-ZenAaVxAGLs2pj1Z2euHsXZYsYWwFS8yK_1jU0h4JkmpvR6KzTQFiOVKYNbKpFLVOWtxlJb_hmVmhl9gLRqAQZck2MVZJi_GBBBVQErGZxSbJVE4uYTmO794&force_h5=1",
   bpomNumber: "NA18260500524",
   halalCertified: true,
   founderStory: {
-    parents: "Moktar & Alm. Diah Rich",
+    parents: "Moktar & Alm. Diah Pitaloka",
     origin: "Universitas Negeri Jakarta (UNJ)",
     focus: "Solusi hiperpigmentasi & noda hitam kulit dengan pendekatan alami & berbasis data."
   }
@@ -75,10 +78,10 @@ export const PRODUCT_DATA = {
   reviewCount: 384,
   bpom: "NA18260500524",
   halal: "Sertifikasi Halal Indonesia",
-  netWeight: "80 gr",
+  netWeight: "50 gram",
   image: productImg,
   logo: logoImg,
-  shortDescription: "Formulasi eksklusif Niacinamide 2%, Ekstrak Kunyit (Curcumin 3-8%), Kopi Robusta & Arabica, Aloe Vera, serta Super-Antioksidan Astaxanthin untuk mencerahkan noda hitam, meratakan warna kulit, dan memperkuat skin barrier.",
+  shortDescription: "Formulasi eksklusif Niacinamide 2%, Kunyit (Curcumin 3-8%), Kopi, Aloe Vera serta Astaxanthin.",
   fullIngredients: [
     "Glycerin", "Aqua", "Sucrose", "Stearic Acid", "Ethanol", "Lauryl Glucoside",
     "Myristic Acid", "Sodium Hydroxide", "Cocamidopropyl Betaine", "Niacinamide (2%)",
@@ -92,7 +95,6 @@ export const PRODUCT_DATA = {
   keyBenefits: [
     "Mencerahkan kulit kusam & menyamarkan area hiperpigmentasi/noda hitam.",
     "Memperkuat skin barrier serta menjaga kelembapan alami kulit tanpa rasa kering kaku.",
-    "Mendorong pembentukan kolagen & regenerasi sel kulit secara gradual.",
     "Memberikan sensasi segar, dingin, dan halus setelah setiap kali mandi.",
     "Diformulasikan dengan bahan alami pilihan yang telah teruji BPOM & Halal."
   ],
@@ -150,28 +152,27 @@ export const INGREDIENTS_LIST: Ingredient[] = [
       "Mendukung proses regenerasi sel kulit sehingga noda bekas luka tampak menyamar bertahap.",
       "Merangsang pembentukan kolagen alami untuk tekstur kulit yang kenyal dan sehat."
     ],
-    benefits: ["Anti-hiperpigmentasi", "Regenerasi Kolagen", "Samarkan Bekas Luka"]
+    benefits: ["Regenerasi Kolagen", "Samarkan Bekas Luka"]
   },
   {
     id: "coffee",
-    name: "Ekstrak Kopi Robusta & Arabica",
+    name: "Ekstrak Kopi",
     latinName: "Coffea Extract",
-    role: "Antioxidant & Energy Booster",
-    badge: "Dual Coffee Extract",
+    role: "Deep Cleansing",
+    badge: "Extraction",
     icon: "Coffee",
     color: "from-stone-200 to-stone-100",
     description: [
-      "Mengandung Asam Klorogenat dan Polifenol sebagai perisai antioksidan dari radikal bebas.",
-      "Kafein alami memberikan kesegaran instan pada kulit lelah dan melancarkan sirkulasi.",
-      "Membantu merawat kenyalan dan kekencangan permukaan kulit secara alami."
+      "Mengandung Asam Klorogenat dan Polifenol sebagai antioksidan dari radikal bebas.",
+      "Kafein alami membantu mengangkat sel kulit mati dan menghaluskan kulit."
     ],
-    benefits: ["Perisai Antioksidan", "Segarkan Kulit Lelah", "Menjaga Kencang Kulit"]
+    benefits: ["Membersihkan Kulit", "Eksfoliasi"]
   },
   {
     id: "aloe-vera",
     name: "Lidah Buaya",
     latinName: "Aloe Barbadensis Leaf Extract",
-    role: "Deep Soothing & Hydration",
+    role: "Hydration",
     badge: "Natural Hydrator",
     icon: "Droplets",
     color: "from-emerald-100 to-teal-50",
@@ -180,7 +181,7 @@ export const INGREDIENTS_LIST: Ingredient[] = [
       "Menenangkan kulit yang terpapar sinar matahari, kusam, atau mengalami iritasi ringan.",
       "Sensasi sejuk dan dingin yang memberikan kenyamanan ekstra setiap kali mandi."
     ],
-    benefits: ["Hidrasi Intensif", "Sensasi Dingin Sejuk", "Menenangkan Iritasi"]
+    benefits: ["Melembabkan Kulit", "Sensasi Dingin Sejuk"]
   },
   {
     id: "astaxanthin",
@@ -191,11 +192,10 @@ export const INGREDIENTS_LIST: Ingredient[] = [
     icon: "ShieldCheck",
     color: "from-rose-100 to-orange-50",
     description: [
-      "Antioksidan 6000x lebih kuat dari Vitamin C untuk menetralkan stres oksidatif.",
-      "Melindungi struktur lipid sel kulit dari kerusakan paparan polusi & sinar UV.",
-      "Menjaga kadar air kulit agar senantiasa kenyal, sehat, dan awet muda."
+      "Antioksidan yang mampu memudarkan garis halus dan menjaga elastisitas kulit.",
+      "Menjaga kulit agar senantiasa kenyal, sehat, dan terawat."
     ],
-    benefits: ["6000x Antioksidan", "Cegah Penuaan Dini", "Kelembapan Ekstra"]
+    benefits: ["Antioksidan", "Kulit Sehat dan Terawat"]
   },
   {
     id: "vco-olive",
@@ -206,8 +206,8 @@ export const INGREDIENTS_LIST: Ingredient[] = [
     icon: "Heart",
     color: "from-slate-100 to-stone-100",
     description: [
-      "Minyak kelapa murni dan zaitun grade tinggi kaya akan asam lemak baik.",
-      "Mengunci kelembapan alami setelah pembilasan sehingga kulit terasa beludru halus.",
+      "Minyak kelapa dan zaitun kaya akan asam lemak baik.",
+      "Menjaga kelembapan alami setelah pembilasan sehingga kulit terasa halus dan lembab.",
       "Pembersih alami yang lembut tanpa merusak lapisan minyak alami kulit."
     ],
     benefits: ["Nutrisi Kulit Halus", "Kunci Kelembapan", "Busa Lembut Alami"]
@@ -220,13 +220,13 @@ export const VOUCHERS: Voucher[] = [
     title: "Voucher Pelanggan Baru",
     discount: "Potongan Rp 10.000",
     minPurchase: "Min. Beli 1 Pcs",
-    validUntil: "31 Des 2026",
+    validUntil: "",
     description: "Khusus untuk pembelian pertama produk MODIARICH Beauty Soap."
   },
   {
     code: "LAUNCHING2026",
     title: "Special Launching Promo",
-    discount: "Diskon 25% OFF",
+    discount: "Diskon 50% OFF",
     minPurchase: "Min. Beli 2 Pcs",
     validUntil: "Promo Terbatas",
     description: "Nikmati harga spesial peluncuran perdana MODIARICH."
@@ -234,10 +234,10 @@ export const VOUCHERS: Voucher[] = [
   {
     code: "BEAUTYFREE",
     title: "Voucher Gratis Ongkir",
-    discount: "Subsidi Ongkir Rp 15.000",
-    minPurchase: "Min. Beli 2 Pcs",
-    validUntil: "Selalu Aktif",
-    description: "Hemat biaya pengiriman ke seluruh Indonesia."
+    discount: "Subsidi Ongkir Rp 10.000",
+    minPurchase: "S&K Berlaku",
+    validUntil: "",
+    description: "Hemat biaya pengiriman ke seluruh jabodetabek."
   },
   {
     code: "BUNDLE3SAVER",
@@ -291,31 +291,43 @@ export const INITIAL_TESTIMONIALS: Testimonial[] = [
 export const INITIAL_JOURNALS: JournalArticle[] = [
   {
     id: "j1",
-    title: "Sinergi Niacinamide 2% & Curcumin Kunyit dalam Memudarkan Hiperpigmentasi",
+    title: "Sinergi Niacinamide 2% & Curcumin Kunyit dalam Memudarkan Hiperpigmentasi & Noda Hitam",
     category: "Clinical Research",
-    readTime: "4 Menit Baca",
     date: "20 September 2026",
-    summary: "Studi ilmiah mengenai penggabungan senyawa aktif kurkumin dengan Niacinamide untuk penghambatan transfer melanosit pada lapisan epidermis.",
-    content: `Hiperpigmentasi dan noda hitam merupakan salah satu concern perawatan kulit yang paling sering ditemui. MODIARICH Beauty Soap hadir dengan riset mendalam menggabungkan Niacinamide 2% dan Ekstrak Kunyit (Curcumin 3–8%).
+    summary: "Studi ilmiah mengenai penggabungan senyawa aktif kurkuminoid dengan Niacinamide 2% untuk memblokade transfer melanosom pada lapisan basal epidermis tanpa merusak kelembapan alami kulit.",
+    content: `Hiperpigmentasi dan noda hitam merupakan salah satu permasalahan kulit yang paling umum dialami masyarakat di wilayah beriklim tropis seperti Indonesia. Paparan sinar ultraviolet yang tinggi secara terus-menerus memicu melanosit di lapisan epidermis untuk memproduksi pigmen melanin secara berlebih sebagai mekanisme perlindungan seluler alami.
 
-Niacinamide bekerja menghambat transfer melanosit ke sel epidermis, sementara antioksidan dalam kurkumin menetralkan radikal bebas yang merangsang pigmentasi berlebih. Penggunaan rutin terbukti meningkatkan kecerahan kulit secara signifikan tanpa mengiritasi skin barrier.`,
-    author: "Tim Riset MODIARICH & Formulator",
-    tags: ["Niacinamide", "Kunyit", "Hiperpigmentasi", "Riset UNJ"],
-    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=600&q=80"
+### Cara Kerja Niacinamide 2% pada Lapisan Epidermis
+Niacinamide (Vitamin B3) dengan konsentrasi 2% bertindak secara spesifik menghambat proses transfer melanosom dari sel melanosit ke sel keratinosit di sekitarnya. Melalui pencegahan transfer pigmen ini, sel-sel kulit baru yang naik ke permukaan akan tampak lebih bersih, jernih, dan warna kulit menjadi cerah merata secara bertahap.
+
+### Kekuatan Anti-inflamasi Curcuminoid (3–8%)
+Riset berbasis formulasi di Universitas Negeri Jakarta (UNJ) membuktikan bahwa ekstrak Curcuma Longa (Kunyit) dengan kandungan kurkumin terstandarisasi 3–8% memberikan efek sinergis yang sangat kuat bila dipadukan dengan Niacinamide. Kurkuminoid bekerja meredakan inflamasi mikro (micro-inflammation) yang kerap menjadi pemicu timbulnya post-inflammatory hyperpigmentation (PIH) atau bekas jerawat menggelap.
+
+### Menjaga Skin Barrier Tetap Kuat & Lembap
+Berbeda dengan bahan pencerah sintetis agresif yang sering menyebabkan sensasi kulit perih atau pengelupasan ekstrim, formula sabun MODIARICH dilengkapi Gliserin murni dan Virgin Coconut Oil (VCO). Hasilnya, proses pencerahan berjalan bertahap, aman digunakan setiap hari, dan ramah untuk semua jenis kulit termasuk kulit rentan sensitif.`,
+    author: "Tim Riset MODIARICH & Formulator UNJ",
+    tags: ["Niacinamide", "Kunyit", "Hiperpigmentasi", "Riset UNJ", "Skin Barrier"],
+    image: "https://images.unsplash.com/photo-1556228720-195a672e8a03?auto=format&fit=crop&w=800&q=80"
   },
   {
     id: "j2",
-    title: "Mengapa Astaxanthin Disebut 'King of Antioxidants' untuk Kulit?",
+    title: "Mengapa Astaxanthin Disebut 'The King of Antioxidants' dalam Perawatan Kulit Modern?",
     category: "Ingredient Spotlight",
-    readTime: "3 Menit Baca",
     date: "15 September 2026",
-    summary: "Astaxanthin memiliki daya tangkal radikal bebas 6.000 kali lebih kuat dari Vitamin C dan 550 kali lebih kuat dari Vitamin E.",
-    content: `Astaxanthin berasal dari mikroalga Haematococcus Pluvialis. Struktur molekulnya yang unik mampu menembus membran sel lipid ganda kulit.
+    summary: "Astaxanthin alami memiliki kemampuan menangkal radikal bebas 6.000 kali lebih poten dari Vitamin C dan 550 kali lipat dibanding Vitamin E untuk menjaga integritas serat kolagen.",
+    content: `Di antara sekian banyak antioksidan yang dikenal dalam dunia dermatologi, Astaxanthin yang diekstrak dari mikroalga Haematococcus Pluvialis menempati urutan teratas dalam hal kapasitas menangkal radikal bebas (singlet oxygen quenching capacity).
 
-Dalam MODIARICH Beauty Soap, Astaxanthin berperan menjaga fleksibilitas serat kolagen dan elastin, mencegah penuaan dini akibat sinar UV dan polusi udara perkotaan.`,
-    author: "R&D MODIARICH",
-    tags: ["Astaxanthin", "Antioksidan", "Anti-Aging"],
-    image: "https://images.unsplash.com/photo-1608248597260-6578616770d2?auto=format&fit=crop&w=600&q=80"
+### Struktur Molekuler Unik yang Menembus Membran Sel
+Kebanyakan antioksidan populer hanya mampu bekerja pada salah satu sisi membran sel (larut air di luar sel atau larut lemak di dalam sel). Astaxanthin memiliki struktur molekul polar ganda unik dengan rantai hidrokarbon panjang yang memungkinkannya membentang melintasi seluruh lapisan lipid ganda membran sel. Hal ini memberikan perlindungan komprehensif dari stres oksidatif luar maupun dalam.
+
+### Perlindungan Menyeluruh terhadap Photo-Aging
+Paparan sinar UV matahari dan polusi udara perkotaan memecah ikatan kolagen dan elastin kulit, yang mengakibatkan hilangnya elastisitas, kendur, dan timbulnya garis halus. Astaxanthin secara aktif melindungi fibroblas dari kerusakan radikal bebas sehingga regenerasi kolagen alami kulit dapat berlangsung maksimal.
+
+### Manfaat Langsung pada MODIARICH Beauty Soap
+Dengan mengintegrasikan ekstrak Astaxanthin murni ke dalam sabun pembersih harian, MODIARICH memberikan lapisan proteksi antioksidan sejak langkah pertama rutinitas mandi pagi dan sore hari Anda. Kulit terasa lebih kencang, segar, dan terlindung dari penuaan dini.`,
+    author: "Divisi R&D Sains MODIARICH",
+    tags: ["Astaxanthin", "Antioksidan", "Anti-Aging", "Haematococcus Pluvialis"],
+    image: "https://images.unsplash.com/photo-1608248597260-6578616770d2?auto=format&fit=crop&w=800&q=80"
   }
 ];
 
@@ -334,7 +346,7 @@ export const FAQS = [
   },
   {
     q: "Berapa lama hasil pemakaian mulai terlihat?",
-    a: "Sensasi kulit lebih bersih, halus, dan lembap langsung terasa sejak pemakaian pertama. Untuk perubahan tingkat kecerahan dan pemaudaran noda hitam, rata-rata konsumen merasakan perubahan bertahap secara signifikan dalam 14–28 hari pemakaian rutin."
+    a: "Sensasi kulit lebih bersih, halus, dan lembap langsung terasa sejak pemakaian pertama. Untuk perubahan tingkat kecerahan dan pemudaran noda hitam, rata-rata konsumen merasakan perubahan bertahap secara signifikan dalam 1-2 bulan dengan pemakaian rutin."
   },
   {
     q: "Apakah cocok untuk semua jenis kulit?",
@@ -342,6 +354,6 @@ export const FAQS = [
   },
   {
     q: "Bagaimana cara memesan produk via WhatsApp atau Marketplace?",
-    a: "Anda dapat mengeklik tombol 'Beli Produk via WA' untuk terhubung langsung dengan admin resmi MODIARICH (081285973475), atau memilih toko resmi kami di Shopee, Tokopedia, dan TikTok Shop yang tertera pada bagian How to Buy."
+    a: "Anda dapat mengeklik tombol 'Beli Produk via WA' untuk terhubung langsung dengan admin resmi MODIARICH (6285218880476), atau memilih toko resmi kami di Shopee, Tokopedia, dan TikTok Shop yang tertera pada bagian How to Buy."
   }
 ];

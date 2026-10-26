@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ShieldCheck, Instagram, MessageCircle, ArrowUp } from 'lucide-react';
+import { Heart, ShieldCheck, Instagram, MessageCircle, ArrowUp, ShoppingCart, ShoppingBag } from 'lucide-react';
 import { BRAND_INFO, PRODUCT_DATA } from '../data/productData';
 
 export const Footer: React.FC = () => {
@@ -25,7 +25,7 @@ export const Footer: React.FC = () => {
             </div>
 
             <p className="text-xs text-[#A3A2A0] leading-relaxed max-w-sm">
-              Personal care brand yang terinspirasi dari keindahan alami dan doa berharga Moktar & Alm. Diah Rich. Dikembangkan melalui riset berbasis data di Universitas Negeri Jakarta untuk menghadirkan kulit sehat bercahaya.
+              Personal care brand yang terinspirasi dari keindahan alami dan doa berharga Moktar & Alm. Diah Pitaloka. Dikembangkan melalui riset berbasis data di Universitas Negeri Jakarta untuk menghadirkan kulit sehat bercahaya.
             </p>
 
             <div className="flex items-center space-x-3 text-xs pt-2">
@@ -51,12 +51,12 @@ export const Footer: React.FC = () => {
 
           {/* Socials & Help */}
           <div className="lg:col-span-4 space-y-3">
-            <h4 className="font-serif text-lg font-bold text-white mb-2">Layanan & Pesanan</h4>
+            <h4 className="font-serif text-lg font-bold text-white mb-2">Toko Resmi & Pemesanan</h4>
             <p className="text-xs text-[#A3A2A0]">
-              Untuk pemesanan langsung via WhatsApp atau pertanyaan khusus seputar produk:
+              Pesan langsung via WhatsApp resmi atau melalui marketplace pilihan Anda:
             </p>
 
-            <div className="pt-2 flex flex-col space-y-2 text-xs">
+            <div className="pt-2 flex flex-col space-y-2.5 text-xs">
               <a
                 href={`https://wa.me/${BRAND_INFO.waNumber}`}
                 target="_blank"
@@ -68,12 +68,32 @@ export const Footer: React.FC = () => {
               </a>
 
               <a
-                href="https://instagram.com"
+                href={BRAND_INFO.shopeeUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 text-[#A3A2A0] hover:text-white"
+                className="flex items-center space-x-2 text-amber-300 hover:text-white transition-colors"
               >
-                <Instagram className="w-4 h-4" />
+                <ShoppingCart className="w-4 h-4 text-amber-400" />
+                <span>Shopee Official Store</span>
+              </a>
+
+              <a
+                href={BRAND_INFO.tiktokShopUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-rose-300 hover:text-white transition-colors"
+              >
+                <ShoppingBag className="w-4 h-4 text-rose-400" />
+                <span>TikTok Shop Resmi</span>
+              </a>
+
+              <a
+                href={BRAND_INFO.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center space-x-2 text-[#A3A2A0] hover:text-pink-400 transition-colors"
+              >
+                <Instagram className="w-4 h-4 text-pink-400" />
                 <span>Instagram: {BRAND_INFO.instagram}</span>
               </a>
             </div>

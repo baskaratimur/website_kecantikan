@@ -23,21 +23,6 @@ export const BrandStory: React.FC = () => {
         {/* 3 Core Story Cards */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           
-          {/* Story Card 1 */}
-          <div className="bg-[#FAF9F6] p-8 rounded-3xl border border-[#B9B9B7]/40 relative group hover:border-[#1C1C1A] transition-all">
-            <div className="w-12 h-12 rounded-2xl bg-[#B9B9B7] text-[#1C1C1A] flex items-center justify-center mb-6 shadow-sm">
-              <Heart className="w-6 h-6" />
-            </div>
-            <span className="text-xs uppercase tracking-widest text-[#7E7D7A] font-bold block mb-1">
-              Doa & Harapan
-            </span>
-            <h3 className="font-serif text-2xl font-bold text-[#1C1C1A] mb-3">
-              Moktar & Alm. Diah Rich
-            </h3>
-            <p className="text-xs sm:text-sm text-[#5C5B58] leading-relaxed">
-              Nama <strong>"MODIARICH"</strong> merupakan bentuk doa dan penghormatan tulus yang terinspirasi dari penggabungan nama kedua orang tua founder: Moktar dan Alm. Diah Rich. Sebuah nama yang membawa keberkahan dan pengingat ke mana arah tujuan brand ini melangkah.
-            </p>
-          </div>
 
           {/* Story Card 2 */}
           <div className="bg-[#FAF9F6] p-8 rounded-3xl border border-[#B9B9B7]/40 relative group hover:border-[#1C1C1A] transition-all">
@@ -51,7 +36,7 @@ export const BrandStory: React.FC = () => {
               From Campus Idea to Beauty Soap
             </h3>
             <p className="text-xs sm:text-sm text-[#5C5B58] leading-relaxed">
-              Berawal dari karya pengembangan produk di Universitas Negeri Jakarta (UNJ) yang mengangkat concern noda hitam dan hiperpigmentasi. Dikembangkan secara ilmiah menggabungkan keunggulan Kunyit, Kopi, Aloe Vera dengan Niacinamide 2% dan Astaxanthin.
+              Berawal dari karya pengembangan produk di Universitas Negeri Jakarta (UNJ) yang mengangkat concern noda hitam dan hiperpigmentasi. Dikembangkan secara ilmiah menggabungkan keunggulan Kunyit, Kopi, Aloe Vera.
             </p>
           </div>
 
@@ -69,6 +54,21 @@ export const BrandStory: React.FC = () => {
             <p className="text-xs sm:text-sm text-[#5C5B58] leading-relaxed">
               Telah memiliki izin edar resmi BPOM (<strong>{BRAND_INFO.bpomNumber}</strong>) dan sertifikasi Halal Indonesia. Kami berkomitmen untuk selalu menghadirkan produk perawatan pribadi yang aman, transparan, dan dapat digunakan dengan rasa percaya diri.
             </p>
+          </div>
+
+          {/* Story Card 1 */}
+          <div className="bg-[#FAF9F6] p-8 rounded-3xl border border-[#B9B9B7]/40 relative group hover:border-[#1C1C1A] transition-all">
+            <div className="w-12 h-12 rounded-2xl bg-[#B9B9B7] text-[#1C1C1A] flex items-center justify-center mb-6 shadow-sm">
+              <Heart className="w-6 h-6" />
+            </div>
+            <span className="text-xs uppercase tracking-widest text-[#7E7D7A] font-bold block mb-1">
+              About Us
+            </span>
+            <h3 className="font-serif text-2xl font-bold text-[#1C1C1A] mb-3">
+              Modiarich
+            </h3>
+            <p className="text-xs sm:text-sm text-[#5C5B58] leading-relaxed">
+MODIARICH berawal dari sebuah gagasan founder untuk menciptakan brand kosmetik yang menghadirkan produk relevan dengan kebutuhan nyata, melalui pendekatan yang nyata, berbasis data dan bertanggung jawab.            </p>
           </div>
 
         </div>

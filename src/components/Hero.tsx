@@ -26,10 +26,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
                 <Sparkles className="w-3.5 h-3.5 text-[#1C1C1A]" />
                 <span>Formulasi Natural Beauty</span>
               </span>
-              {/* <span className="inline-flex items-center space-x-1.5 bg-white border border-[#B9B9B7]/60 text-[#1C1C1A] text-xs font-medium px-3 py-1.5 rounded-full shadow-xs">
+              <span className="inline-flex items-center space-x-1.5 bg-white border border-[#B9B9B7]/60 text-[#1C1C1A] text-xs font-medium px-3 py-1.5 rounded-full shadow-xs">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" />
-                <span>BPOM {BRAND_INFO.bpomNumber} & Halal Certified</span>
-              </span> */}
+                <span>BPOM RI & Halal Certified</span>
+              </span>
             </div>
 
             {/* Main Headline */}
@@ -38,23 +38,23 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
             </h1>
 
             {/* Beauty Highlight Text */}
-            <p className="text-base sm:text-lg text-[#5C5B58] font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
+            {/* <p className="text-base sm:text-lg text-[#5C5B58] font-normal leading-relaxed max-w-2xl mx-auto lg:mx-0">
               MODIARICH menghadirkan karya perawatan kecantikan personal bernilai tinggi. Lahir dari riset berbasis data dan perpaduan harmonis <strong className="text-[#1C1C1A]">Niacinamide 2%, Ekstrak Kunyit (Curcumin 3-8%), Kopi, Lidah Buaya</strong> serta super antioksidan <strong className="text-[#1C1C1A]">Astaxanthin</strong>.
-            </p>
+            </p> */}
 
             {/* Key Value Propositions List */}
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-2 text-left max-w-xl mx-auto lg:mx-0">
               <div className="flex items-start space-x-2 bg-white/70 p-3 rounded-xl border border-[#B9B9B7]/30">
                 <CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" />
-                <span className="text-xs font-medium text-[#1C1C1A]">Samarkan Hiperpigmentasi</span>
+                <span className="text-xs font-medium text-[#1C1C1A]">Samarkan Bekas Luka</span>
               </div>
               <div className="flex items-start space-x-2 bg-white/70 p-3 rounded-xl border border-[#B9B9B7]/30">
                 <CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" />
-                <span className="text-xs font-medium text-[#1C1C1A]">Skin Barrier Lebih Kuat</span>
+                <span className="text-xs font-medium text-[#1C1C1A]">Skin Barrier</span>
               </div>
               <div className="flex items-start space-x-2 bg-white/70 p-3 rounded-xl border border-[#B9B9B7]/30">
                 <CheckCircle2 className="w-4 h-4 text-amber-700 mt-0.5 shrink-0" />
-                <span className="text-xs font-medium text-[#1C1C1A]">Sensasi Lembut & Dingin</span>
+                <span className="text-xs font-medium text-[#1C1C1A]">Mencerahkan Kulit</span>
               </div>
             </div>
 
@@ -78,7 +78,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
             </div>
 
             {/* Trust Rating Bar */}
-            <div className="pt-4 flex items-center justify-center lg:justify-start space-x-4 text-xs text-[#5C5B58]">
+            {/* <div className="pt-4 flex items-center justify-center lg:justify-start space-x-4 text-xs text-[#5C5B58]">
               <div className="flex -space-x-2 overflow-hidden">
                 <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User" />
                 <img className="inline-block h-8 w-8 rounded-full ring-2 ring-white" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=100&q=80" alt="User" />
@@ -93,7 +93,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
                 </div>
                 <span className="text-[11px]">Dipercaya 500+ Wanita Indonesia</span>
               </div>
-            </div>
+            </div> */}
 
           </div>
 
@@ -120,8 +120,11 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
                 <div className="absolute bottom-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#B9B9B7]/30 text-[11px] font-semibold text-[#1C1C1A] shadow-sm">
                   ✨ Niacinamide 2%
                 </div>
+                <div className="absolute bottom-11 right-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#B9B9B7]/30 text-[11px] font-semibold text-[#1C1C1A] shadow-sm">
+                  🌿 Kunyit, Kopi & Lidah Buaya
+                </div>
                 <div className="absolute bottom-3 right-3 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-[#B9B9B7]/30 text-[11px] font-semibold text-[#1C1C1A] shadow-sm">
-                  🌿 Kunyit & Astaxanthin
+                  🌿 Astaxanthin
                 </div>
               </div>
 
@@ -131,9 +134,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenOrderModal, onOpenDetailModal 
                   <span className="text-xs font-semibold text-[#7E7D7A] uppercase tracking-wider">
                     MODIARICH Beauty Care
                   </span>
-                  <span className="text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-medium border border-emerald-200">
-                    BPOM & Halal Ready
-                  </span>
+                  {/* <span className="text-xs bg-emerald-50 text-emerald-700 px-2 py-0.5 rounded font-medium border border-emerald-200">
+                    NA18260500524
+                  </span> */}
                 </div>
 
                 <h3 className="font-serif text-2xl font-bold text-[#1C1C1A]">

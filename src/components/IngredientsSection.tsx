@@ -25,9 +25,9 @@ export const IngredientsSection: React.FC = () => {
           <span className="bg-[#B9B9B7] text-[#1C1C1A] text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-widest">
             Bahan Utama (Key Ingredients)
           </span>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1C1C1A]">
-            Dua Alam & Sains dalam Satu Formulasi Presisi
-          </h2>
+          {/* <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[#1C1C1A]">
+            Setiap racikan dalam MODIARICH Beauty Soap dipilih berdasar keunggulan klinis untuk bekerja sinergis memancarkan kecantikan alami kulit Anda.
+          </h2> */}
           <p className="text-sm sm:text-base text-[#5C5B58]">
             Setiap racikan dalam MODIARICH Beauty Soap dipilih berdasar keunggulan klinis untuk bekerja sinergis memancarkan kecantikan alami kulit Anda.
           </p>

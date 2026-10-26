@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingBag, Star, ShieldCheck, Check, Info, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
+import { ShoppingBag, ShoppingCart, Star, ShieldCheck, Check, Info, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
 import { PRODUCT_DATA, BRAND_INFO } from '../data/productData';
 
 interface ProductSectionProps {
@@ -63,13 +63,13 @@ export const ProductSection: React.FC<ProductSectionProps> = ({ onOpenOrderModal
               
               <div>
                 <div className="flex items-center space-x-2 text-amber-500 mb-1">
-                  <div className="flex space-x-1">
+                  {/* <div className="flex space-x-1">
                     {[...Array(5)].map((_, i) => (
                       <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />
                     ))}
-                  </div>
-                  <span className="text-xs font-bold text-[#1C1C1A]">{PRODUCT_DATA.rating} / 5.0</span>
-                  <span className="text-xs text-[#7E7D7A]">({PRODUCT_DATA.reviewCount} Ulasan Pembeli)</span>
+                  </div> */}
+                  {/* <span className="text-xs font-bold text-[#1C1C1A]">{PRODUCT_DATA.rating} / 5.0</span>
+                  <span className="text-xs text-[#7E7D7A]">({PRODUCT_DATA.reviewCount} Ulasan Pembeli)</span> */}
                 </div>
 
                 <h3 className="font-serif text-3xl font-bold text-[#1C1C1A]">
@@ -149,6 +149,29 @@ export const ProductSection: React.FC<ProductSectionProps> = ({ onOpenOrderModal
                   <Info className="w-4 h-4 text-[#7E7D7A]" />
                   <span>Bahan Lengkap & Cara Pakai</span>
                 </button>
+              </div>
+
+              {/* Marketplace Alternatives */}
+              <div className="pt-2 flex flex-wrap items-center gap-2">
+                <span className="text-xs text-[#5C5B58] font-medium">Beli di Marketplace:</span>
+                <a
+                  href={BRAND_INFO.shopeeUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-amber-50 hover:bg-amber-100 text-amber-800 border border-amber-200 rounded-full transition-colors text-xs font-semibold"
+                >
+                  <ShoppingCart className="w-3.5 h-3.5 text-amber-600" />
+                  <span>Shopee Official</span>
+                </a>
+                <a
+                  href={BRAND_INFO.tiktokShopUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-1.5 px-3 py-1.5 bg-stone-100 hover:bg-stone-200 text-stone-800 border border-stone-300 rounded-full transition-colors text-xs font-semibold"
+                >
+                  <ShoppingBag className="w-3.5 h-3.5 text-stone-800" />
+                  <span>TikTok Shop Resmi</span>
+                </a>
               </div>
 
             </div>
